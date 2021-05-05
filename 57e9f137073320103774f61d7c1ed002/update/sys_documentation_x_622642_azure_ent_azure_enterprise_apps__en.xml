@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Azure Enterprise Apps" language="en" table="x_622642_azure_ent_azure_enterprise_apps">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Azure Enterprise Apps</label>
+            <language>en</language>
+            <name>x_622642_azure_ent_azure_enterprise_apps</name>
+            <plural>Azure Enterprise Apps</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-05 13:48:57</sys_created_on>
+            <sys_id>989afd37073320103774f61d7c1ed097</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Azure Enterprise Apps</sys_name>
+            <sys_package display_value="Azure Enterprise Apps" source="x_622642_azure_ent">57e9f137073320103774f61d7c1ed002</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Azure Enterprise Apps">57e9f137073320103774f61d7c1ed002</sys_scope>
+            <sys_update_name>sys_documentation_x_622642_azure_ent_azure_enterprise_apps__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-05 13:48:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
