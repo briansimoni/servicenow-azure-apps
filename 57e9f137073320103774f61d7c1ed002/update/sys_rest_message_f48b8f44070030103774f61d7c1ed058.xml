@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>oauth2</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description>Creates an Azure Enterprise App based off of one of the gallery app template IDs available.</description>
+        <name>Application Template Instantiate</name>
+        <oauth2_profile display_value="Client Credentials">041f0708070030103774f61d7c1ed062</oauth2_profile>
+        <protocol_name/>
+        <rest_endpoint>https://graph.microsoft.com/v1.0/applicationTemplates</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-06 14:24:02</sys_created_on>
+        <sys_id>f48b8f44070030103774f61d7c1ed058</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Application Template Instantiate</sys_name>
+        <sys_package display_value="Azure Enterprise Apps" source="x_622642_azure_ent">57e9f137073320103774f61d7c1ed002</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Azure Enterprise Apps">57e9f137073320103774f61d7c1ed002</sys_scope>
+        <sys_update_name>sys_rest_message_f48b8f44070030103774f61d7c1ed058</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-06 14:45:16</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

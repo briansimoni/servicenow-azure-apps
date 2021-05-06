@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>sys_popup,oauth_oidc_provider</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-06 14:33:40</sys_created_on>
+        <sys_id>596e0bc4070030103774f61d7c1ed06d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sys_popup,oauth_oidc_provider</sys_name>
+        <sys_package display_value="Azure Enterprise Apps" source="x_622642_azure_ent">57e9f137073320103774f61d7c1ed002</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Azure Enterprise Apps">57e9f137073320103774f61d7c1ed002</sys_scope>
+        <sys_update_name>sys_ui_view_596e0bc4070030103774f61d7c1ed06d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-06 14:33:40</sys_updated_on>
+        <title>Sys_popup,oauth_oidc_provider</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

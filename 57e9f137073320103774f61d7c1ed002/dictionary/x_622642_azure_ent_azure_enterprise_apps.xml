@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Azure Enterprise Apps" max_length="40" name="x_622642_azure_ent_azure_enterprise_apps" type="collection">
+    <element label="Azure Enterprise Apps" max_length="40" name="x_622642_azure_ent_azure_enterprise_apps" sizeclass="0" type="collection">
         <element label="GSI" max_length="40" name="gsi" type="string"/>
     </element>
 </database>
