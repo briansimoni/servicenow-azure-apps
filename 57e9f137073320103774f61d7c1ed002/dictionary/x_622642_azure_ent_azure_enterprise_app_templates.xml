@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Azure enterprise app templates" max_length="40" name="x_622642_azure_ent_azure_enterprise_app_templates" type="collection">
+        <element label="categories" max_length="4000" name="categories" type="glide_list"/>
+        <element label="description" max_length="4000" name="description" type="string"/>
+        <element display="true" label="displayName" max_length="4000" name="displayname" type="string"/>
+        <element label="homePageUrl" max_length="4000" name="homepageurl" type="string"/>
+        <element label="id" max_length="4000" name="id" type="string"/>
+        <element label="logoUrl" max_length="4000" name="logourl" type="string"/>
+        <element label="publisher" max_length="4000" name="publisher" type="string"/>
+    </element>
+</database>

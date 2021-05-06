@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Azure Enterprise Apps" max_length="40" name="x_622642_azure_ent_azure_enterprise_apps" sizeclass="0" type="collection">
+        <element default="69ae4c5007c030103774f61d7c1ed0d7" display="true" label="Azure gallery app template" max_length="32" name="azure_gallery_app_template" reference="x_622642_azure_ent_azure_enterprise_app_templates" type="reference"/>
         <element label="GSI" max_length="40" name="gsi" type="string"/>
+        <index name="index">
+            <element name="azure_gallery_app_template"/>
+        </index>
     </element>
 </database>

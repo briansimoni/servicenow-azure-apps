@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>true</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>true</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_622642_azure_ent_azure_enterprise_apps</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>temp</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    var applicationTemplates;
+
+    try {
+        //         var r = new sn_ws.RESTMessageV2('x_622642_azure_ent.Application Template Instantiate', 'Default GET');
+
+        //         //override authentication profile 
+        //         //authentication type ='basic'/ 'oauth2'
+        //         //r.setAuthenticationProfile(authentication type, profile name);
+
+        //         //set a MID server name if one wants to run the message on MID
+        //         //r.setMIDServer('MY_MID_SERVER');
+
+        //         //if the message is configured to communicate through ECC queue, either
+        //         //by setting a MID server or calling executeAsync, one needs to set skip_sensor
+        //         //to true. Otherwise, one may get an intermittent error that the response body is null
+        //         //r.setEccParameter('skip_sensor', true);
+
+        //         var response = r.execute();
+        //         var responseBody = response.getBody();
+        //         var httpStatus = response.getStatusCode();
+        //         applicationTemplates = JSON.parse(responseBody).value;
+
+        var data = {
+            "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#applicationTemplates",
+            "value": [{
+                    "id": "54273cf9-1283-43b7-8481-4e4693b2d505",
+                    "displayName": "Kelly Total Benefits Solution Online (KTBS)",
+                    "homePageUrl": "https://www.ktbsonline.com/default.aspx",
+                    "supportedSingleSignOnModes": ["password", "external"],
+                    "supportedProvisioningTypes": [],
+                    "logoUrl": "https://az495088.vo.msecnd.net/app-logo/kellytotalbenefitssolutiononlinektbs_215.png",
+                    "categories": ["health"],
+                    "publisher": "KTBSOnline Technology",
+                    "description": null
+                },
+                {
+                    "id": "4f2fc37d-967b-4929-9959-fbe9c9dbccca",
+                    "displayName": "Amelio",
+                    "homePageUrl": "https://amelio.co",
+                    "supportedSingleSignOnModes": ["oidc", "external"],
+                    "supportedProvisioningTypes": [],
+                    "logoUrl": "https://az495088.vo.msecnd.net/app-logo/amelio_215.png",
+                    "categories": ["businessMgmt", "humanResources", "tools"],
+                    "publisher": "Am\u00e9lio",
+                    "description": "Amelio measures and helps improve employee engagement through its powerful HR analytics platform."
+                },
+                {
+                    "id": "a6655505-8f5b-44b4-b0b0-1ba24462d1b4",
+                    "displayName": "Lexonis TalentScape",
+                    "homePageUrl": "https://www.lexonis.com",
+                    "supportedSingleSignOnModes": ["saml", "external"],
+                    "supportedProvisioningTypes": [],
+                    "logoUrl": "https://az495088.vo.msecnd.net/app-logo/lexonistalentscape_215.png",
+                    "categories": ["businessMgmt", "humanResources", "New"],
+                    "publisher": "Lexonis",
+                    "description": "Lexonis TalentScape helps you to assess and leverage your employees' greatest assets, their skills and competencies."
+                }
+            ]
+        };
+        applicationTemplates = data.value;
+
+    } catch (ex) {
+        var message = ex.message;
+    }
+
+
+    try {
+        var savedAppTemplateIds = [];
+        var savedAppTemplateRecord = new GlideRecord('x_622642_azure_ent_azure_enterprise_app_templates');
+        savedAppTemplateRecord.query(); // Issue the query to the database to get all records 
+
+        while (savedAppTemplateRecord.next()) {
+            savedAppTemplateIds.push({
+                id: savedAppTemplateRecord.id,
+            });
+        }
+
+        for (var i = 0; i < applicationTemplates.length; i++) {
+            templateAlreadyExists = false;
+            for (var j = 0; j < savedAppTemplateIds.length; j++) {
+                if (applicationTemplates[i].id === savedAppTemplateIds[j].id) {
+                    templateAlreadyExists = true;
+                    break;
+                }
+            }
+            if (!templateAlreadyExists) {
+                var newTemplate = new GlideRecord('x_622642_azure_ent_azure_enterprise_app_templates');
+                newTemplate.id = applicationTemplates[i].id;
+                newTemplate.description = applicationTemplates[i].description;
+                newTemplate.homepageurl = applicationTemplates[i].homePageUrl;
+                newTemplate.displayname = applicationTemplates[i].displayName;
+                newTemplate.logourl = applicationTemplates[i].logoUrl;
+                newTemplate.publisher = applicationTemplates[i].publisher;
+                newTemplate.categories = applicationTemplates[i].categories;
+                newTemplate.insert();
+            }
+        }
+    } catch (err) {
+        gs.error("something wrong with populating the azure app tempaltes " + err);
+    }
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-06 16:47:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6adce7c8074030103774f61d7c1ed037</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>temp</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Azure Enterprise Apps" source="x_622642_azure_ent">57e9f137073320103774f61d7c1ed002</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Azure Enterprise Apps">57e9f137073320103774f61d7c1ed002</sys_scope>
+        <sys_update_name>sys_script_6adce7c8074030103774f61d7c1ed037</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-06 17:41:19</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6adce7c8074030103774f61d7c1ed037"/>
+</record_update>
